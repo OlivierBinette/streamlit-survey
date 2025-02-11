@@ -27,6 +27,7 @@ from streamlit_survey.survey_component import (
     TextArea,
     TextInput,
     TimeInput,
+    Pills,
 )
 
 __all__ = [
@@ -41,6 +42,7 @@ __all__ = [
     "CheckBox",
     "DateInput",
     "TimeInput",
+    "Pills",
 ]
 
 __author__ = """Olivier Binette"""

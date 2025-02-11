@@ -36,6 +36,7 @@ from streamlit_survey.survey_component import (
     TextArea,
     TextInput,
     TimeInput,
+    Pills,
 )
 
 PathLike = Union[str, bytes, os.PathLike]
@@ -485,3 +486,23 @@ class StreamlitSurvey:
             Value of the time input
         """
         return TimeInput(self, label, id, **kwargs).display()
+
+    def pills(self, label: str = "", id: str = None, **kwargs) -> List[Any]:
+        """
+        Create a pills widget
+
+        Parameters
+        ----------
+        label: str
+            Label of the widget
+        id: str
+            ID of the widget. If None, the ID will be automatically generated.
+        **kwargs
+            Additional keyword arguments passed to `st.time_input`
+
+        Returns
+        -------
+        List[Any]
+            List of selected options
+        """
+        return Pills(self, label, id, **kwargs).display()
